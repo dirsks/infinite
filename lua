@@ -1,5 +1,6 @@
 repeat task.wait() until game:IsLoaded()
 
+--// bad words
 words = {
     ['gay'] = 'Bullying',
     ['lesbian'] = 'Bullying',
