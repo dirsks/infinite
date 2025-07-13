@@ -1,5 +1,13 @@
 repeat task.wait() until game:IsLoaded()
 
+local function sendNotification(title, message, duration)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = title,
+        Text = message,
+        Duration = duration
+    })
+end
+
 --// bad words
 words = {
     ['gay'] = 'Bullying',
@@ -152,3 +160,5 @@ msg.OnClientEvent:Connect(function(msgdata)
        handler(tostring(msgdata.Message),tostring(msgdata.FromSpeaker))
     end
 end)
+
+sendNotification("If you seeing this it worked", "Join https://discord.gg/x7CdXeDH", 7)
