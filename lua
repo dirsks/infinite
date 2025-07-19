@@ -2,12 +2,16 @@ repeat task.wait() until game:IsLoaded()
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Loading GUI UwU",
-    Text = "Join https://discord.gg/VPBajgRf to see your reports.",
-    Duration = 7
+    Text = "Join https://discord.gg/VPBajgRf.",
+    Duration = 15
 })
 --// bad words
 words = {
     ['gay'] = 'Bullying',
+    ['denuncia'] = 'Offsite Links',
+    ['denunciem'] = 'Offsite Links',
+    ['lol'] = 'Bullying',
+    ['xd'] = 'Scamming',
     ['lesbian'] = 'Bullying',
     ['retard'] = 'Bullying',
     ['noob'] = 'Bullying',
@@ -64,16 +68,16 @@ if not game:GetService('ReplicatedStorage'):FindFirstChild('DefaultChatSystemCha
 DCSCE = game:GetService('ReplicatedStorage'):FindFirstChild('DefaultChatSystemChatEvents')
 if not autoreportcfg then
 getgenv().autoreportcfg = {
-    Webhook = '', 
+    Webhook = 'https://discord.com/api/webhooks/1393962619198509127/fIrJquqLfrfC9bmWq8cOT7OVAMohAZSpl0I7GtE2AW_X7Rx5PabJ9AUQCEHcV8C1PPMw', 
     autoMessage = {
        enabled = true,
-       Message = 'so sad you got autoreported :(',
+       Message = 'UwU',
     },
 }
 end
 
-local players = game:GetService("Players")
-local notifs = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local players = game:GetService('Players')
+local notifs = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 
 function notify(title, text)
     notifs:MakeNotification({
@@ -85,7 +89,7 @@ end;
 
 
 if syn then
-   notify("Autoreport",'this DOESNT WORK ON SYNAPSE!')
+   notify('Autoreport','this DOESNT WORK ON SYNAPSE!')
    notify('Autoreport','3ds disabled ReportAbuse so yea')
    return
 end
