@@ -1,13 +1,10 @@
 repeat task.wait() until game:IsLoaded()
 
-local function sendNotification(title, message, duration)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = title,
-        Text = message,
-        Duration = duration
-    })
-end
-
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Loading GUI UwU",
+    Text = "Join https://discord.gg/VPBajgRf to see your reports.",
+    Duration = 7
+})
 --// bad words
 words = {
     ['gay'] = 'Bullying',
@@ -47,6 +44,11 @@ words = {
     ['bad'] = 'Bullying',
     ['worst'] = 'Bullying',
     ['fat'] = 'Bullying',
+    ['lixo'] = 'Bullying',
+    ['no ganas sin hacks'] = 'Bullying',
+    ['sin hacks no puede'] = 'Bullying',
+    ['your hecker'] = 'Bullying',
+    ['ez'] = 'Bullying',
     ['hack'] = 'Scamming',
     ['exploit'] = 'Scamming',
     ['cheat'] = 'Scamming',
@@ -160,5 +162,3 @@ msg.OnClientEvent:Connect(function(msgdata)
        handler(tostring(msgdata.Message),tostring(msgdata.FromSpeaker))
     end
 end)
-
-sendNotification("If you seeing this it worked", "Join https://discord.gg/x7CdXeDH", 7)
